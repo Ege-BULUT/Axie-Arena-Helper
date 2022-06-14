@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ApplicationLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/baslik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:text="Axie Turkey Team Arena Helper"
+        android:textColor="#FF9800"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02"
+        tools:text="Axie Turkey Team Arena Helper" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/AnaMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone">
+
+        <Button
+            android:id="@+id/NewGame"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:background="#673AB7"
+            android:text="Start New Game"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/existingGame"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="25dp"
+            android:background="#673AB7"
+            android:text="Custom Game"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/NewGame"
+            app:layout_constraintStart_toStartOf="@+id/NewGame"
+            app:layout_constraintTop_toBottomOf="@+id/NewGame" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/NewGameMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:visibility="visible">
+
+        <Button
+            android:id="@+id/kartAt_me"
+            android:layout_width="97dp"
+            android:layout_height="69dp"
+            android:rotation="-90"
+            android:text="KartAt"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/Cards_Me"
+            app:layout_constraintEnd_toStartOf="@+id/CardPlus_Me"
+            app:layout_constraintStart_toEndOf="@+id/Cards_Me"
+            app:layout_constraintTop_toTopOf="@+id/Energy_Me" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="cursive"
+            android:text="RAKIP"
+            android:textColor="#FF5100"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/EnergyPlus_OP"
+            app:layout_constraintEnd_toEndOf="@+id/EnergyMinus_OP"
+            app:layout_constraintStart_toStartOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enerji :"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Kart Sayısı :"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/Energy_Op"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="3"
+            android:textColor="#FF9800"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/Cards_Op"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="6"
+            android:textColor="#2196F3"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView3"
+            app:layout_constraintStart_toEndOf="@+id/textView3" />
+
+        <ImageButton
+            android:id="@+id/CardPlus_OP"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@android:drawable/ic_input_add"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:src="@android:drawable/ic_input_add"
+            app:layout_constraintBottom_toBottomOf="@+id/Cards_Op"
+            app:layout_constraintStart_toStartOf="@+id/EnergyPlus_OP"
+            app:layout_constraintTop_toTopOf="@+id/Cards_Op"
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:src="@android:drawable/ic_input_add" />
+
+        <ImageButton
+            android:id="@+id/CardMinus_OP"
+            style="@android:style/Widget.ImageButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:background="?attr/actionBarItemBackground"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:src="@android:drawable/button_onoff_indicator_on"
+            android:tint="#FF0000"
+            app:layout_constraintBottom_toBottomOf="@+id/Cards_Op"
+            app:layout_constraintStart_toEndOf="@+id/CardPlus_OP"
+            app:layout_constraintTop_toTopOf="@+id/Cards_Op"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/EnergyMinus_OP"
+            style="@android:style/Widget.ImageButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:background="?attr/actionBarItemBackground"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:src="@android:drawable/button_onoff_indicator_on"
+            android:tint="#FF0000"
+            app:layout_constraintBottom_toBottomOf="@+id/Energy_Op"
+            app:layout_constraintStart_toEndOf="@+id/EnergyPlus_OP"
+            app:layout_constraintTop_toTopOf="@+id/Energy_Op"
+            app:layout_constraintVertical_bias="0.461"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/EnergyPlus_OP"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@android:drawable/ic_input_add"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:src="@android:drawable/ic_input_add"
+            app:layout_constraintBottom_toBottomOf="@+id/Energy_Op"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/Energy_Op"
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:src="@android:drawable/ic_input_add" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enerji :"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Kart Sayısı :"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <TextView
+            android:id="@+id/Energy_Me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="3"
+            android:textColor="#FF9800"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView8"
+            app:layout_constraintStart_toEndOf="@+id/textView8" />
+
+        <TextView
+            android:id="@+id/Cards_Me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="6"
+            android:textColor="#2196F3"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView9"
+            app:layout_constraintStart_toEndOf="@+id/textView9" />
+
+        <ImageButton
+            android:id="@+id/CardMinus_Me"
+            style="@android:style/Widget.ImageButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:background="?attr/actionBarItemBackground"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:src="@android:drawable/button_onoff_indicator_on"
+            android:tint="#FF0000"
+            app:layout_constraintBottom_toBottomOf="@+id/Cards_Me"
+            app:layout_constraintStart_toEndOf="@+id/CardPlus_Me"
+            app:layout_constraintTop_toTopOf="@+id/Cards_Me"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/EnergyPlus_Me"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@android:drawable/ic_input_add"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:src="@android:drawable/ic_input_add"
+            app:layout_constraintBottom_toBottomOf="@+id/Energy_Me"
+            app:layout_constraintStart_toStartOf="@+id/CardPlus_OP"
+            app:layout_constraintTop_toTopOf="@+id/Energy_Me"
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:src="@android:drawable/ic_input_add" />
+
+        <ImageButton
+            android:id="@+id/CardPlus_Me"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@android:drawable/ic_input_add"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:src="@android:drawable/ic_input_add"
+            app:layout_constraintBottom_toBottomOf="@+id/Cards_Me"
+            app:layout_constraintStart_toStartOf="@+id/EnergyPlus_Me"
+            app:layout_constraintTop_toTopOf="@+id/Cards_Me"
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:src="@android:drawable/ic_input_add" />
+
+        <ImageButton
+            android:id="@+id/EnergyMinus_Me"
+            style="@android:style/Widget.ImageButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:background="?attr/actionBarItemBackground"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:src="@android:drawable/button_onoff_indicator_on"
+            android:tint="#FF0000"
+            app:layout_constraintBottom_toBottomOf="@+id/Energy_Me"
+            app:layout_constraintStart_toEndOf="@+id/EnergyPlus_Me"
+            app:layout_constraintTop_toTopOf="@+id/Energy_Me"
+            app:layout_constraintVertical_bias="0.461"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/endTurn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turu Bitir"
+            app:layout_constraintBottom_toTopOf="@+id/Energy_Me"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Cards_Op"
+            app:layout_constraintVertical_bias="0.8" />
+
+        <Button
+            android:id="@+id/Reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Reset"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Cards_Me" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:rotation="-90"
+            android:text="enerji çalma"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <ImageButton
+            android:id="@+id/steal_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:minWidth="48dp"
+            android:rotation="90"
+            android:scaleX="1"
+            android:scaleY="1"
+            app:layout_constraintBottom_toTopOf="@+id/textView8"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="?attr/actionModeCloseDrawable"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/steal_op"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="48dp"
+            android:rotation="-90"
+            android:scaleX="1"
+            android:scaleY="1"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/steal_me"
+            app:layout_constraintTop_toBottomOf="@+id/Cards_Op"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="?attr/actionModeCloseDrawable"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/kartAt_op"
+            android:layout_width="97dp"
+            android:layout_height="69dp"
+            android:rotation="-90"
+            android:text="KartAt"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/Cards_Op"
+            app:layout_constraintEnd_toStartOf="@+id/CardPlus_OP"
+            app:layout_constraintStart_toEndOf="@+id/Cards_Op"
+            app:layout_constraintTop_toTopOf="@+id/Energy_Op" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
